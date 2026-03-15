@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "name": "",
+  "class": "",
+  "level": 1,
+  "xp": 0,
+  "skill_points_available": 0,
+  "stats": {
+    "base": {
+      "INT": 4,
+      "CHA": 4,
+      "WIS": 4,
+      "DEX": 4,
+      "CON": 4,
+      "STR": 4
+    },
+    "equipment_bonus": {
+      "INT": 0,
+      "CHA": 0,
+      "WIS": 0,
+      "DEX": 0,
+      "CON": 0,
+      "STR": 0
+    },
+    "total": {
+      "INT": 4,
+      "CHA": 4,
+      "WIS": 4,
+      "DEX": 4,
+      "CON": 4,
+      "STR": 4
+    }
+  },
+  "equipment": {
+    "weapon": null,
+    "armor": null,
+    "accessory": null,
+    "mount": null
+  },
+  "inventory": [],
+  "quests": {
+    "disciplines": [],
+    "dailies": [],
+    "adventures": []
+  },
+  "gold": 0,
+  "streak_days": 0,
+  "last_active": "",
+  "total_conversations": 0,
+  "total_xp_earned": 0,
+  "created_at": "",
+  "quiet_mode": false
+}
