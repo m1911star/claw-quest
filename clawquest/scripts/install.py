@@ -41,7 +41,7 @@ python3 ~/.openclaw/skills/clawquest/scripts/game_engine.py award_xp <amount>
 
 ### 状态栏
 
-除非 `character.json` 中 `quiet_mode: true`，每轮回复末尾追加：
+除非 `character.json` 中 `quiet_mode: true`，每轮回复末尾先输出 `---` 分隔线，再输出：
 
 ```bash
 python3 ~/.openclaw/skills/clawquest/scripts/display.py status_bar
