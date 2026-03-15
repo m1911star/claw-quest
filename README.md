@@ -33,7 +33,7 @@ clawub install clawquest
 
 # Or manual installation
 cd ~/.openclaw/skills/
-git clone https://github.com/yourusername/claw-quest.git clawquest
+git clone https://github.com/m1911star/claw-quest.git clawquest
 ```
 
 ### Create Your Character
