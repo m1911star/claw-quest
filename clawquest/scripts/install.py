@@ -5,6 +5,7 @@ Usage: python3 install.py [--uninstall]
 """
 import sys
 import os
+import json
 from pathlib import Path
 
 MARKER_START = "<!-- clawquest:global-xp:start -->"
@@ -59,20 +60,38 @@ python3 ~/.openclaw/skills/clawquest/scripts/display.py status_bar
 
 
 def find_agents_md():
+    # 1. Prefer OPENCLAW_WORKSPACE env var
+    workspace = os.environ.get("OPENCLAW_WORKSPACE")
+    if workspace:
+        p = Path(workspace) / "AGENTS.md"
+        if p.parent.exists():
+            return p
+
+    # 2. Read from openclaw.json config (agents.defaults.workspace)
+    config_path = Path.home() / ".openclaw" / "openclaw.json"
+    if config_path.exists():
+        try:
+            config = json.loads(config_path.read_text(encoding="utf-8"))
+            ws = config.get("agents", {}).get("defaults", {}).get("workspace")
+            if ws:
+                p = Path(ws) / "AGENTS.md"
+                if p.parent.exists():
+                    return p
+        except Exception:
+            pass
+
+    # 3. Common fallback paths
     candidates = [
         Path.home() / ".openclaw" / "workspace" / "AGENTS.md",
         Path.home() / ".clawd" / "AGENTS.md",
         Path(os.getcwd()) / "AGENTS.md",
     ]
-    # also check env
-    workspace = os.environ.get("OPENCLAW_WORKSPACE")
-    if workspace:
-        candidates.insert(0, Path(workspace) / "AGENTS.md")
     for p in candidates:
         if p.exists():
             return p
-    # return default even if doesn't exist
-    return candidates[0]
+
+    # 4. Default (may not exist yet — will be created)
+    return Path.home() / ".openclaw" / "workspace" / "AGENTS.md"
 
 
 def is_installed(content):
