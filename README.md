@@ -3,6 +3,10 @@
 > **RPG Gamification for AI Interactions**  
 > Transform every conversation with your AI into character progression, loot drops, and quest rewards.
 
+[🇨🇳 中文文档 README.zh.md](./README.zh.md)
+
+---
+
 ClawQuest is an OpenClaw skill that adds an RPG game layer to your AI assistant experience. Level up by using your AI naturally, collect equipment with stat bonuses, complete quests, and watch your character grow stronger over time.
 
 ---
