@@ -29,12 +29,20 @@ ClawQuest gamifies AI interactions with a full RPG system:
 
 ```bash
 # Install via ClawHub (recommended)
-clawub install clawquest
+clawhub install clawquest
 
 # Or manual installation
 cd ~/.openclaw/skills/
 git clone https://github.com/m1911star/claw-quest.git clawquest
 ```
+
+**After installing, run the setup script once:**
+
+```bash
+python3 ~/.openclaw/skills/clawquest/scripts/install.py
+```
+
+This patches your `AGENTS.md` with global XP rules — so every conversation that triggers OpenClaw (any group, DM, or channel) will award XP automatically. ✨
 
 ### Create Your Character
 

@@ -5,6 +5,23 @@
 
 ---
 
+## 🚀 Installation
+
+After copying this skill to `~/.openclaw/skills/clawquest/`, run the installer once to enable global XP tracking across **all** conversations:
+
+```bash
+python3 ~/.openclaw/skills/clawquest/scripts/install.py
+```
+
+This patches your `AGENTS.md` with global XP rules — so every chat, group message, or conversation that triggers OpenClaw will award XP automatically.
+
+To uninstall:
+```bash
+python3 ~/.openclaw/skills/clawquest/scripts/install.py --uninstall
+```
+
+---
+
 ## 🎮 Core Concept
 
 ClawQuest transforms normal AI usage into RPG progression. Every conversation grants XP, completing tasks rewards loot, and users build their character through six attributes mapped to AI capabilities.
